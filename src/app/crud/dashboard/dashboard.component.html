@@ -1,0 +1,41 @@
+<div class="dash">
+    <h1>Employee CRUD Operations</h1>
+    <hr>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="text" placeholder="Search by ID" aria-label="Recipient's username" aria-describedby="button-addon2">
+        
+      </div>
+<button class="btn btn-outline-success" routerLink="add" >ADD employee</button>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            
+            <th>ID</th>
+            <th>employee name</th>
+            <th>employee salary</th>
+            <th>employee age</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+                 
+                <tr *ngFor="let e of empdata |search:text">
+                    <td>{{e.id}}</td>
+                    <td>{{e.employee_name}}</td>
+                    <td>{{e.employee_salary}}</td>
+                    <td>{{e.employee_age}}</td>
+                    <td>
+                        <button type="submit" class="btn btn-outline-success" [routerLink]="['edit',e.id]"><i class="fa fa-pencil-square" aria-hidden="true"></i>
+
+                        </button> &nbsp;
+                        <button type="submit" class="btn btn-outline-danger" (click)="ondelete(e.id)"><i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>
+            
+
+        
+    </tbody>
+
+</table>
+</div>

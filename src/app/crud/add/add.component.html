@@ -1,0 +1,18 @@
+
+<div class="emp">
+    <h2>Add New Employee</h2>
+<form (ngSubmit)="addemp(myform.value)" #myform="ngForm">
+    
+    
+    <label for="">Enter your name</label>
+    <input type="text" name="ename" ngModel placeholder="Enter your name" required class="form-control"  >
+    <label for="">Enter your salary</label>
+    <input type="text" name="epost" ngModel placeholder="Enter your salary" required class="form-control" >
+    <label for="">Enter your age</label>
+    <input type="text" name="eexp" ngModel placeholder="Enter your age" required class="form-control"  >
+    <div class="bt">
+    <button type="submit" class="btn btn-outline-success" margin-top="2px"  onclick="addemp()">submit</button>
+    </div>
+</form>
+
+</div>

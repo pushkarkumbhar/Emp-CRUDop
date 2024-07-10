@@ -1,0 +1,17 @@
+
+<div class="edit">
+    <h2>Edit Your Details</h2>
+<form (ngSubmit)="editemp(myform.value)" #myform="ngForm">
+    
+
+    <label for="">Enter your name</label>
+    <input type="text" name="ename" [ngModel]="empdata?.employee_name" placeholder="Enter your name" required class="form-control"  >
+    <label for="">Enter your salary</label>
+    <input type="text" name="epost" [ngModel]="empdata?.employee_salary" placeholder="Enter your post" required class="form-control" >
+    <label for="">Enter your age</label>
+    <input type="text" name="eexp" [ngModel]="empdata?.employee_age" placeholder="Enter your experience" required class="form-control"  >
+    <div class="bt">
+    <button type="submit" class="btn btn-outline-success">update</button>
+    </div>
+</form>
+</div>
